@@ -16,6 +16,14 @@ resource "aws_instance" "demo" {
 }
 
 /*
+resource "aws_instance" "demo_new" {
+  provider      = aws.aws_west
+  ami           = "ami-03130878b60947df3"
+  instance_type = "t2.micro"
+}
+*/
+
+/*
 Using count meta-argument
 
 resource "aws_instance" "demo" {
