@@ -18,7 +18,10 @@ variable "type" {
   description = "Size of VM"
 }
 
-output "instance_id" {
-  //value = aws_instance.demo[*].id
-  value = [for b in aws_instance.demo : b.id]
+output "instance_id_1" {
+  value = aws_instance.demo_vm_1.id
+}
+
+output "instance_id_2" {
+  value = aws_instance.demo_vm_2.id
 }
