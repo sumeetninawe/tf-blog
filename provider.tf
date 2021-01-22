@@ -5,6 +5,14 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "letsdotech"
+    workspaces {
+      name = "tf-blog-workspace"
+    }
+  }
 }
 
 provider "aws" {
