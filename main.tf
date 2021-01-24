@@ -24,7 +24,6 @@ data "aws_ami" "myAmi" {
 }
 
 resource "aws_instance" "demo_vm_1" {
-  count = 0
   provider                = aws.aws_west
   ami                     = data.aws_ami.myAmi.id
   instance_type           = var.type
@@ -39,7 +38,6 @@ resource "aws_instance" "demo_vm_1" {
 }
 
 resource "aws_instance" "demo_vm_2" {
-  count = 0
   provider                = aws.aws_west
   ami                     = data.aws_ami.myAmi.id
   instance_type           = var.type
