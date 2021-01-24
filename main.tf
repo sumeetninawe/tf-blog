@@ -28,12 +28,12 @@ resource "aws_instance" "demo_vm_1" {
   ami                     = data.aws_ami.myAmi.id
   instance_type           = var.type
 
-  provisioner "local-exec" {
+  /*provisioner "local-exec" {
     command = "echo \"VM 1 Public IP: \" ${self.public_ip} >> /mymachines/message1.txt"
-  }
+  }*/
 
   tags = {
-    name = "Demo VM 1"
+    name = "Demo VM One"
   }
 }
 
@@ -42,12 +42,12 @@ resource "aws_instance" "demo_vm_2" {
   ami                     = data.aws_ami.myAmi.id
   instance_type           = var.type
 
-  provisioner "local-exec" {
+  /*provisioner "local-exec" {
     command = "echo \"VM 2 Public IP: \" ${self.public_ip} >> /mymachines/message2.txt"
-  }
+  }*/
 
   tags = {
-    name = "Demo VM 2"
+    name = "Demo VM Two"
   }
 }
 
