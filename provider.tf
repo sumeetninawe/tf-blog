@@ -6,13 +6,13 @@ terraform {
     }
   }
 
-  backend "remote" {
+  /*backend "remote" {
     hostname = "app.terraform.io"
     organization = "letsdotech"
     workspaces {
       name = "tf-blog-workspace"
     }
-  }
+  }*/
 }
 
 provider "aws" {
